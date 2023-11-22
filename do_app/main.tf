@@ -33,6 +33,14 @@ resource "digitalocean_app" "digitalocean_app" {
           type  = env.value.type
         }
       }
+
+      log_destination {
+        name = "Papertrail Log"
+
+        papertrail {
+          endpoint = "syslog+tls://logs6.papertrailapp.com:11237"
+        }
+      }
     }
   }
 }
