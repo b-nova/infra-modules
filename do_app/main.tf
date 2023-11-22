@@ -24,6 +24,14 @@ resource "digitalocean_app" "digitalocean_app" {
           type  = env.value.type
         }
       }
+
+      log_destination {
+        name = "Papertrail Log"
+
+        papertrail {
+          endpoint = var.papertrail_endpoint
+        }
+      }
     }
   }
 }

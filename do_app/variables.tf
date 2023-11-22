@@ -54,3 +54,9 @@ variable "env" {
     }
   EOT
 }
+
+variable "papertrail_endpoint" {
+  type        = string
+  description = "The endpoint of papertrail"
+  default     = "syslog+tls://logs6.papertrailapp.com:11237"
+}
