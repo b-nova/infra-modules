@@ -38,7 +38,7 @@ resource "digitalocean_app" "digitalocean_app" {
         name = "Papertrail Log"
 
         papertrail {
-          endpoint = "syslog+tls://logs6.papertrailapp.com:11237"
+          endpoint = var.papertrail_endpoint
         }
       }
     }
