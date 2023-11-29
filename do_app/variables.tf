@@ -5,7 +5,7 @@ variable "name" {
 
 variable "region" {
   type        = string
-  default     = "fra1"
+  default     = "fra"
   description = "The slug for the DigitalOcean data center region hosting the app."
 }
 
