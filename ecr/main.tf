@@ -31,7 +31,7 @@ resource "aws_ecr_lifecycle_policy" "ecr_repository" {
         selection : {
           "tagStatus" : "untagged",
           "countType" : "sinceImagePushed",
-          "countUnit" : "days"
+          "countUnit" : "days",
           "countNumber" : 1
         },
         action : {
