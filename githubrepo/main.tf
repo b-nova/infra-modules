@@ -11,10 +11,9 @@ resource "github_repository" "repository" {
   name        = var.name
   description = "Repository for ${var.name}"
 
-  has_downloads = false
-  has_issues    = true
-  has_projects  = false
-  has_wiki      = false
+  has_issues   = true
+  has_projects = false
+  has_wiki     = false
 
   archived = var.archived
 
