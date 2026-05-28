@@ -25,3 +25,12 @@ variable "numberImages" {
   default     = 5
   type        = number
 }
+
+variable "retentionRules" {
+  type = list(object({
+    description    = string
+    tagPatternList = list(string)
+  }))
+  description = "Optional. When set, replaces the single tagPrefixList retention rule with one 'imageCountMoreThan numberImages' rule per entry (priority follows list order). When null, the legacy single-rule behavior (tagStatus/tagPrefixList) is used."
+  default     = null
+}
